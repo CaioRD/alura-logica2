@@ -1,7 +1,7 @@
 function sortear(){
-    let quantidade = document.getElementById('quantidade').value;
-    let de = document.getElementById('de').value;
-    let ate = document.getElementById('ate').value;
+    let quantidade = parseInt(document.getElementById('quantidade').value);
+    let de = parseInt(document.getElementById('de').value);
+    let ate = parseInt(document.getElementById('ate').value);
 
         // Verificar se os valores são válidos
     if (isNaN(quantidade) || isNaN(de) || isNaN(ate) || de > ate) {
@@ -11,7 +11,7 @@ function sortear(){
 
     let sorteados = [];
     let numero;
-x   
+  
     for(let i = 0; i < quantidade; i++){
         numero = obterNumeroAleatorio(de, ate);
         sorteados.push(numero);
