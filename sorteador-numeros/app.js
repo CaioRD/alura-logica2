@@ -4,10 +4,14 @@ function sortear(){
     let ate = parseInt(document.getElementById('ate').value);
 
         // Verificar se os valores são válidos
-    if (isNaN(quantidade) || isNaN(de) || isNaN(ate) || de > ate) {
+    if (isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
      alert("Por favor, insira valores válidos.");
      return;
      }
+     else if (de >= ate) {
+        alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
+        return;
+      }
 
     let sorteados = [];
     let numero;
